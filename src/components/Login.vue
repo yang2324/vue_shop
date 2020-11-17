@@ -54,6 +54,7 @@ export default {
       this.$refs.loginFormRef.validate(async valid => {
         if (!valid) return;
         const {data: res} = await this.$http.post("login", this.loginForm);
+        console.log(res)
         if (res.meta.status !== 200) return this.$message({
           showClose: true,
           message: '登录失败',
@@ -81,7 +82,6 @@ export default {
   background-color: #2c3e50;
   height: 100vh;
 }
-
 .login-box {
   width: 450px;
   height: 300px;
@@ -92,7 +92,6 @@ export default {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
 .login-img {
   width: 130px;
   height: 130px;
@@ -105,14 +104,12 @@ export default {
   transform: translate(-50%, -50%);
   background-color: #fff;
 }
-
 .login-img img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   background-color: #eeeeee;
 }
-
 .login-form {
   position: absolute;
   bottom: 0;
@@ -120,7 +117,6 @@ export default {
   padding: 0 20px;
   box-sizing: border-box;
 }
-
 .btns {
   display: flex;
   justify-content: flex-end;
