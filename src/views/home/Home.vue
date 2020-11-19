@@ -4,7 +4,7 @@
     <!--头部内容-->
     <el-header>
       <div class="header-context">
-        <img src="~assets/img/logo.png"/>
+        <img src="~assets/img/logo.jpg"/>
         <span>电商后台管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
@@ -114,6 +114,7 @@ export default {
 .header-context img {
   width: 45px;
   height: 45px;
+  border-radius: 50%;
 }
 .header-context span {
   font-size: 20px;
