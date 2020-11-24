@@ -352,14 +352,14 @@ export default {
         return this.$message.error("请选择需要分配的角色")
       }
       const {data: res} = await this.$http.put(`users/${this.userInfo.id}/role`, {rid: this.selectRoleId})
-      if (res.meta.status!==200){
+      if (res.meta.status !== 200) {
         return this.$message.error("分配角色失败")
       }
       this.getUserList()
       this.setRoleDialogVisible = false
     },
     //监听关闭对话框的事件
-    roleDialogClose(){
+    roleDialogClose() {
       this.selectRoleId = ""
       this.userInfo = {}
     }

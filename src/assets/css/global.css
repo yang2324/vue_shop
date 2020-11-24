@@ -24,3 +24,9 @@ html, body, #app {
 .el-cascader-menu__list {
     height: 300px;
 }
+.el-steps{
+    margin: 20px 0;
+}
+.ql-editor{
+    min-height: 300px;
+}
