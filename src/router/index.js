@@ -1,19 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
-import Login from "../components/Login";
-import Home from "../views/home/Home";
-import Welcome from "../views/home/childComps/Welcome";
-import User from "../views/user/User";
-import Rights from "../views/power/Rights";
-import Roles from "../views/power/Roles";
-import Cate from "../views/goods/Cate";
-import Params from "../views/goods/Params";
-import Goods from "../views/goods/Goods";
-import Add from "../views/goods/Add";
-import Order from "../views/order/Order";
-import Report from "../views/report/Report";
+//懒加载
+const Login = () => import('components/Login')
+const Home = () => import('views/home/Home')
+const Welcome = () => import('views/home/childComps/Welcome')
+const User = () => import('views/user/User')
+const Rights = () => import('views/power/Rights')
+const Roles = () => import('views/power/Roles')
+const Cate = () => import('views/goods/Cate')
+const Params = () => import('views/goods/Params')
+const Goods = () => import('views/goods/Goods')
+const Add = () => import('views/goods/Add')
+const Order = () => import('views/order/Order')
+const Report = () => import('views/report/Report')
 
 Vue.use(VueRouter)
 
